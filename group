@@ -53,3 +53,4 @@ slocate:x:21:
 tcpdump:x:72:
 admin:x:1000:
 vboxsf:x:986:
+gkrellmd:x:985:

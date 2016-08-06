@@ -52,3 +52,4 @@ tss:x:59:
 slocate:x:21:
 tcpdump:x:72:
 admin:x:1000:
+vboxsf:x:986:
