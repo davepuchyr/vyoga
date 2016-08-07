@@ -74,3 +74,18 @@ done
 
 unset i
 unset -f pathmunge
+
+# dmjp
+export EDITOR=vim
+export BROWSER=google-chrome
+# dmjp: appengine maxs out at jdk7 as of 2014.08.12 export JAVA_HOME=/usr/java/latest
+#export JAVA_HOME=/usr/java/jdk1.7.0_79
+
+export TEST_DB_PANDA_USER=dave
+export TEST_DB_PANDA_PORT=3306
+export TEST_DB_PANDA_PASSWORD=quickcash
+export TEST_DB_PANDA_DATABASE=cppconn_test
+export TEST_DB_PANDA_HOST=localhost
+export TEST_IB_HOST=localhost
+export TEST_IB_PORT=7496
+
