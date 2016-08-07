@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ipset type="hash:net">
+  <short>192.168.x.0</short>
+  <description>192.168.x.0/24</description>
+  <entry>192.168.1.0/24</entry>
+  <entry>192.168.56.0/24</entry>
+</ipset>
