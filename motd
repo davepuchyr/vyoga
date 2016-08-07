@@ -1,0 +1,8 @@
+Windoze Administrator password: etsuser's
+Public Adapter: enp0s3
+Host Only Adapter: enp0s8: 192.168.56.101
+
+- IPv4 and 6 drivers on public interfaces are disabled in windoze.
+- The Host Only adapter in windoze is configured to use 192.168.56.101 as it's gateway,
+  which gives windoze net access via guest linux.
+
