@@ -2,6 +2,6 @@
 <whitelist>
   <command name="/usr/bin/python3 -Es /usr/bin/firewall-config"/>
   <user id="0"/>
-  <selinux context="system_u:system_r:NetworkManager_t:s0"/>
   <selinux context="system_u:system_r:virtd_t:s0-s0:c0.c1023"/>
+  <selinux context="system_u:system_r:NetworkManager_t:s0"/>
 </whitelist>

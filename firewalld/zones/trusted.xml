@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone target="ACCEPT">
+  <short>Trusted</short>
+  <description>All network connections are accepted.</description>
+  <source ipset="192.168.x.0"/>
+  <service name="imaps"/>
+  <service name="dns"/>
+  <service name="samba-client"/>
+  <service name="samba"/>
+  <service name="http"/>
+  <service name="mysql"/>
+  <service name="https"/>
+  <port protocol="tcp" port="3129"/>
+</zone>

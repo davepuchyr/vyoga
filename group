@@ -54,3 +54,5 @@ tcpdump:x:72:
 vboxsf:x:986:
 gkrellmd:x:985:
 dave:x:500:
+cgred:x:499:
+setroubleshoot:x:498:

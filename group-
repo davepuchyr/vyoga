@@ -51,7 +51,7 @@ sshd:x:74:
 tss:x:59:
 slocate:x:21:
 tcpdump:x:72:
-admin:x:1000:
 vboxsf:x:986:
 gkrellmd:x:985:
 dave:x:500:
+cgred:x:499:
