@@ -1688,6 +1688,7 @@
 /var/named/chroot(/.*)?	system_u:object_r:named_conf_t:s0
 /var/lib/bugzilla(/.*)?	system_u:object_r:bugzilla_rw_content_t:s0
 /var/lib/collectd(/.*)?	system_u:object_r:collectd_var_lib_t:s0
+/var/run/collectd(/.*)?	system_u:object_r:collectd_var_run_t:s0
 /etc/courier-imap(/.*)?	system_u:object_r:courier_etc_t:s0
 /var/log/cyphesis(/.*)?	system_u:object_r:cyphesis_log_t:s0
 /var/run/cyphesis(/.*)?	system_u:object_r:cyphesis_var_run_t:s0
@@ -2209,6 +2210,7 @@
 /emul/ia32-linux/lib(/.*)?/ld-[^/]*\.so(\.[^/]*)*	--	system_u:object_r:ld_so_t:s0
 /emul/ia32-linux/usr(/.*)?/lib(/.*)?/ld-[^/]*\.so(\.[^/]*)*	system_u:object_r:ld_so_t:s0
 /usr/lib/cyrus-imapd/.*	--	system_u:object_r:bin_t:s0
+/var/log/boincerr\.log.*	--	system_u:object_r:boinc_log_t:s0
 /var/log/fail2ban\.log.*	--	system_u:object_r:fail2ban_log_t:s0
 /var/log/cfingerd\.log.*	--	system_u:object_r:fingerd_log_t:s0
 /var/log/iscsiuio\.log.*	--	system_u:object_r:iscsi_log_t:s0
@@ -2251,6 +2253,7 @@
 /var/named/chroot/etc(/.*)?	system_u:object_r:etc_t:s0
 /usr/lib/udev/devices(/.*)?	system_u:object_r:device_t:s0
 /etc/ipsec\.d/examples(/.*)?	system_u:object_r:etc_t:s0
+/var/lib/boinc-client(/.*)?	system_u:object_r:boinc_var_lib_t:s0
 /var/spool/callweaver(/.*)?	system_u:object_r:callweaver_spool_t:s0
 /var/cfengine/outputs(/.*)?	system_u:object_r:cfengine_log_t:s0
 /var/lib/tftpboot/etc(/.*)?	system_u:object_r:cobbler_var_lib_t:s0
@@ -2689,6 +2692,7 @@
 /lib/systemd/system/sensord.service	--	system_u:object_r:sensord_unit_file_t:s0
 /usr/lib/sasl2/libsasldb\.so(\.[^/]*)*	--	system_u:object_r:textrel_shlib_t:s0
 /usr/lib/libcncpmslld328\.so(\.[^/]*)*	system_u:object_r:textrel_shlib_t:s0
+/var/lib/VBoxGuestAdditions.*/lib/.*\.so	--	system_u:object_r:textrel_shlib_t:s0
 /usr/lib/systemd/system/abrt.*	--	system_u:object_r:abrt_unit_file_t:s0
 /usr/lib/systemd/system/alsa.*	--	system_u:object_r:alsa_unit_file_t:s0
 /usr/lib/systemd/system/apmd.*	--	system_u:object_r:apmd_unit_file_t:s0
@@ -3015,6 +3019,7 @@
 /usr/lib/systemd/system-generators/lvm2.*	--	system_u:object_r:lvm_exec_t:s0
 /usr/lib/systemd/system/rabbitmq-server.*	--	system_u:object_r:rabbitmq_unit_file_t:s0
 /usr/lib/systemd/system/openstack-swift.*	--	system_u:object_r:swift_unit_file_t:s0
+/etc/boinc-client/global_prefs_override.xml	--	system_u:object_r:boinc_var_lib_t:s0
 /usr/share/wordpress/wp-content/uploads(/.*)?	system_u:object_r:httpd_sys_rw_content_t:s0
 /usr/share/wordpress/wp-content/upgrade(/.*)?	system_u:object_r:httpd_sys_rw_content_t:s0
 /opt/dirsrv/var/run/dirsrv/dsgw/cookies(/.*)?	system_u:object_r:httpd_var_run_t:s0
@@ -3439,6 +3444,7 @@
 /etc/nohotplug	--	system_u:object_r:etc_runtime_t:s0
 /usr/sbin/hcid	--	system_u:object_r:bluetooth_exec_t:s0
 /usr/sbin/sdpd	--	system_u:object_r:bluetooth_exec_t:s0
+/usr/bin/boinc	--	system_u:object_r:boinc_exec_t:s0
 /usr/sbin/zipl	--	system_u:object_r:bootloader_exec_t:s0
 /usr/sbin/ccsd	--	system_u:object_r:ccs_exec_t:s0
 /usr/bin/wodim	--	system_u:object_r:cdrecord_exec_t:s0
