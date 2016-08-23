@@ -1713,6 +1713,7 @@
 /var/lock/lockdev(/.*)?	system_u:object_r:lockdev_lock_t:s0
 /usr/centreon/log(/.*)?	system_u:object_r:var_log_t:s0
 /var/lib/logcheck(/.*)?	system_u:object_r:logwatch_cache_t:s0
+/var/run/storaged(/.*)?	system_u:object_r:lvm_var_run_t:s0
 /var/run/opendkim(/.*)?	system_u:object_r:dkim_milter_data_t:s0
 /var/lib/minidlna(/.*)?	system_u:object_r:minidlna_db_t:s0
 /var/log/minidlna(/.*)?	system_u:object_r:minidlna_log_t:s0
@@ -3007,6 +3008,7 @@
 /usr/lib/systemd/system/NetworkManager.*	--	system_u:object_r:NetworkManager_unit_file_t:s0
 /usr/lib/policykit/polkit-grant-helper.*	--	system_u:object_r:policykit_grant_exec_t:s0
 /usr/libexec/polkit-resolve-exe-helper.*	--	system_u:object_r:policykit_resolve_exec_t:s0
+/usr/lib/systemd/system/corosync-qnetd.*	--	system_u:object_r:cluster_unit_file_t:s0
 /usr/share/squeezeboxserver/CPAN/arch/.+\.so	--	system_u:object_r:textrel_shlib_t:s0
 /ostree/deploy/rhel-atomic-host/deploy(/.*)?	system_u:object_r:system_conf_t:s0
 /etc/NetworkManager/system-connections(/.*)?	system_u:object_r:NetworkManager_etc_rw_t:s0
@@ -3025,6 +3027,7 @@
 /opt/dirsrv/var/run/dirsrv/dsgw/cookies(/.*)?	system_u:object_r:httpd_var_run_t:s0
 /usr/share/w3c-markup-validator/cgi-bin(/.*)?	system_u:object_r:w3c_validator_script_exec_t:s0
 /usr/lib/xorg/modules/extensions/nvidia(-[^/]*)?/libglx\.so(\.[^/]*)*	--	system_u:object_r:textrel_shlib_t:s0
+/usr/lib/systemd/system/corosync-qdevice.*	--	system_u:object_r:cluster_unit_file_t:s0
 /usr/lib/systemd/system/hwloc-dump-hwdata.*	--	system_u:object_r:hwloc_dhwd_unit_t:s0
 /usr/lib/systemd/system/ovirt-guest-agent.*	--	system_u:object_r:rhev_agentd_unit_file_t:s0
 /opt/Komodo-Edit-5/lib/python/lib/python2.6/lib-dynload/.*\.so(\.[^/]*)*	--	system_u:object_r:textrel_shlib_t:s0
@@ -4955,6 +4958,7 @@
 /usr/bin/nova-scheduler	--	system_u:object_r:nova_exec_t:s0
 /usr/sbin/nsd-checkconf	--	system_u:object_r:nsd_exec_t:s0
 /usr/sbin/nsd-checkzone	--	system_u:object_r:nsd_exec_t:s0
+/usr/bin/oddjob_request	--	system_u:object_r:oddjob_exec_t:s0
 /etc/rc\.d/init\.d/openct	--	system_u:object_r:openct_initrc_exec_t:s0
 /usr/sbin/ods-enforcerd	--	system_u:object_r:opendnssec_exec_t:s0
 /etc/apm/event\.d/pcmcia	--	system_u:object_r:cardmgr_exec_t:s0
@@ -4967,6 +4971,7 @@
 /usr/bin/neutron-server	--	system_u:object_r:neutron_exec_t:s0
 /usr/bin/quantum-server	--	system_u:object_r:neutron_exec_t:s0
 /etc/mdadm\.conf\.anacbak	--	system_u:object_r:mdadm_conf_t:s0
+/usr/bin/corosync-qnetd	--	system_u:object_r:cluster_exec_t:s0
 /usr/libexec/modcluster	--	system_u:object_r:ricci_modcluster_exec_t:s0
 /usr/bin/roundup-server	--	system_u:object_r:roundup_exec_t:s0
 /usr/bin/yum-deprecated	--	system_u:object_r:rpm_exec_t:s0
@@ -5446,6 +5451,7 @@
 /usr/bin/mate-keyring-daemon	--	system_u:object_r:gkeyringd_exec_t:s0
 /usr/libexec/news/expireover	--	system_u:object_r:innd_exec_t:s0
 /usr/libexec/news/shrinkfile	--	system_u:object_r:innd_exec_t:s0
+/usr/libexec/openipmi-helper	--	system_u:object_r:ipmievd_exec_t:s0
 /usr/libexec/ipsec/_plutorun	--	system_u:object_r:ipsec_mgmt_exec_t:s0
 /usr/share/pyicq-t/PyICQt\.py	--	system_u:object_r:pyicqt_exec_t:s0
 /usr/libexec/nm-l2tp-service	--	system_u:object_r:l2tpd_exec_t:s0
@@ -5856,6 +5862,7 @@
 /usr/lib/nagios/plugins/check_radius	--	system_u:object_r:nagios_services_plugin_exec_t:s0
 /usr/lib/systemd/system/nscd\.service	--	system_u:object_r:nscd_unit_file_t:s0
 /usr/libexec/polkit-read-auth-helper	--	system_u:object_r:policykit_auth_exec_t:s0
+/usr/share/corosync/corosync-qdevice	--	system_u:object_r:cluster_exec_t:s0
 /usr/share/rhev-agent/rhev-agentd\.py	--	system_u:object_r:rhev_agentd_exec_t:s0
 /lib/systemd/system/svnserve\.service	--	system_u:object_r:svnserve_unit_file_t:s0
 /var/run/systemd/resolve/resolv\.conf	--	system_u:object_r:net_conf_t:s0
