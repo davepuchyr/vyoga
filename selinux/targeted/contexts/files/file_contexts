@@ -2458,6 +2458,7 @@
 /var/lib/pki-ocsp/alias(/.*)?	system_u:object_r:pki_tomcat_cert_t:s0
 /etc/prelude-correlator(/.*)?	system_u:object_r:prelude_correlator_config_t:s0
 /dev/\.systemd/readahead(/.*)?	system_u:object_r:readahead_var_run_t:s0
+/var/run/corosync-qnetd(/.*)?	system_u:object_r:cluster_var_run_t:s0
 /var/run/samba/winbindd(/.*)?	system_u:object_r:winbind_var_run_t:s0
 /var/run/setroubleshoot(/.*)?	system_u:object_r:setroubleshoot_var_run_t:s0
 /var/log/setroubleshoot(/.*)?	system_u:object_r:setroubleshoot_var_log_t:s0
@@ -2586,6 +2587,7 @@
 /var/lib/PolicyKit-public(/.*)?	system_u:object_r:policykit_var_lib_t:s0
 /var/spool/postfix/public(/.*)?	system_u:object_r:postfix_public_t:s0
 /var/spool/postfix/bounce(/.*)?	system_u:object_r:postfix_spool_bounce_t:s0
+/var/run/corosync-qdevice(/.*)?	system_u:object_r:cluster_var_run_t:s0
 /usr/share/lightsquid/cgi(/.*)?	system_u:object_r:squid_script_exec_t:s0
 /etc/sysconfig/networking(/.*)?	system_u:object_r:net_conf_t:s0
 /var/run/systemd/sessions(/.*)?	system_u:object_r:systemd_logind_sessions_t:s0
@@ -2815,6 +2817,7 @@
 /var/cache/alchemist/printconf.*	system_u:object_r:cupsd_rw_etc_t:s0
 /usr/lib/systemd/generator/lvm.*	system_u:object_r:lvm_unit_file_t:s0
 /usr/lib/systemd/system/kmscon.*\.*	--	system_u:object_r:kmscon_unit_file_t:s0
+/usr/libexec/iptables/iptables.init	--	system_u:object_r:iptables_exec_t:s0
 /usr/lib/systemd/system/rkt-gc.timer	--	system_u:object_r:rkt_unit_file_t:s0
 /var/www/openshift/console/tmp(/.*)?	system_u:object_r:httpd_tmp_t:s0
 /var/www/openshift/console/log(/.*)?	system_u:object_r:httpd_log_t:s0
@@ -4641,6 +4644,7 @@
 /var/run/gssproxy\.pid	--	system_u:object_r:gssproxy_var_run_t:s0
 /etc/rc\.d/init\.d/innd	--	system_u:object_r:innd_initrc_exec_t:s0
 /usr/libexec/ipa-otpd	--	system_u:object_r:ipa_otpd_exec_t:s0
+/var/lock/subsys/ipmi	--	system_u:object_r:ipmievd_lock_t:s0
 /usr/lib/ipsec/eroute	--	system_u:object_r:ipsec_exec_t:s0
 /sbin/ipvsadm-restore	--	system_u:object_r:iptables_exec_t:s0
 /var/run/iscsiuio\.pid	--	system_u:object_r:iscsi_var_run_t:s0
@@ -5175,6 +5179,7 @@
 /etc/rc\.d/init\.d/ebtables	--	system_u:object_r:iptables_initrc_exec_t:s0
 /etc/rc\.d/init\.d/nftables	--	system_u:object_r:iptables_initrc_exec_t:s0
 /usr/sbin/ipvsadm-restore	--	system_u:object_r:iptables_exec_t:s0
+/var/lock/subsys/iptables	--	system_u:object_r:iptables_lock_t:s0
 /etc/krb5kdc/kadm5\.keytab	--	system_u:object_r:krb5_keytab_t:s0
 /usr/kerberos/sbin/kpropd	--	system_u:object_r:kpropd_exec_t:s0
 /etc/rc\.d/init\.d/ksmtuned	--	system_u:object_r:ksmtuned_initrc_exec_t:s0
