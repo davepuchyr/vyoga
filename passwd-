@@ -33,3 +33,5 @@ tcpdump:x:72:72::/:/sbin/nologin
 vboxadd:x:991:1::/var/run/vboxadd:/bin/false
 gkrellmd:x:990:985:GNU Krell daemon:/:/sbin/nologin
 dave:x:500:500:Dave Puchyr:/home/dave:/bin/bash
+setroubleshoot:x:499:498::/var/lib/setroubleshoot:/sbin/nologin
+git:x:503:503:git:/home/git:/sbin/nologin
