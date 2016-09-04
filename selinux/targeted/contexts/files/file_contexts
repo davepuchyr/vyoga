@@ -170,8 +170,8 @@
 /dev/tlk[0-3]	-c	system_u:object_r:v4l_device_t:s0
 /dev/xvc[^/]*	-c	system_u:object_r:tty_device_t:s0
 /dev/vcs[^/]*	-c	system_u:object_r:tty_device_t:s0
-/dev/i2c[^/]*	-c	system_u:object_r:tty_device_t:s0
 /dev/ip2[^/]*	-c	system_u:object_r:tty_device_t:s0
+/dev/i2c[^/]*	-c	system_u:object_r:tty_device_t:s0
 /dev/pcd[0-3]	-b	system_u:object_r:removable_device_t:s0
 /dev/xvd[^/]*	-b	system_u:object_r:fixed_disk_device_t:s0
 /dev/ubd[^/]*	-b	system_u:object_r:fixed_disk_device_t:s0
@@ -235,8 +235,8 @@
 /dev/pty/.*	-c	system_u:object_r:bsdpty_device_t:s0
 /dev/isdn.*	-c	system_u:object_r:tty_device_t:s0
 /dev/hvsi.*	-c	system_u:object_r:tty_device_t:s0
-/dev/tape.*	-c	system_u:object_r:tape_device_t:s0
 /dev/capi.*	-c	system_u:object_r:tty_device_t:s0
+/dev/tape.*	-c	system_u:object_r:tape_device_t:s0
 /dev/bsg/.+	-c	system_u:object_r:scsi_generic_device_t:s0
 /dev/dri/.+	-c	system_u:object_r:dri_device_t:s0
 /dev/card.*	-c	system_u:object_r:xserver_misc_device_t:s0
@@ -261,9 +261,9 @@
 /dev/srnd[0-7]	-c	system_u:object_r:sound_device_t:s0
 /dev/tts/[^/]*	-c	system_u:object_r:tty_device_t:s0
 /dev/dasd[^/]*	-c	system_u:object_r:fixed_disk_device_t:s0
+/dev/dasd[^/]*	-b	system_u:object_r:fixed_disk_device_t:s0
 /dev/drbd[^/]*	-b	system_u:object_r:fixed_disk_device_t:s0
 /dev/ida/[^/]*	-b	system_u:object_r:fixed_disk_device_t:s0
-/dev/dasd[^/]*	-b	system_u:object_r:fixed_disk_device_t:s0
 /etc/xen/.*/.*	system_u:object_r:virt_etc_rw_t:s0
 /dev/lirc[0-9]+	-c	system_u:object_r:lirc_device_t:s0
 /dev/ipmi[0-9]+	-c	system_u:object_r:ipmi_device_t:s0
@@ -378,8 +378,8 @@
 /dev/amidi.*	-c	system_u:object_r:sound_device_t:s0
 /dev/aload.*	-c	system_u:object_r:sound_device_t:s0
 /dev/pppox.*	-c	system_u:object_r:ppp_device_t:s0
-/dev/vport.*	-c	system_u:object_r:virtio_device_t:s0
 /dev/ttySG.*	-c	system_u:object_r:tty_device_t:s0
+/dev/vport.*	-c	system_u:object_r:virtio_device_t:s0
 /dev/sbpcd.*	-b	system_u:object_r:removable_device_t:s0
 /var/lock/.*	<<none>>
 /etc/dhcpc.*	system_u:object_r:dhcp_etc_t:s0
@@ -1181,6 +1181,7 @@
 /var/lib/bacula.*	system_u:object_r:bacula_var_lib_t:s0
 /var/log/bacula.*	system_u:object_r:bacula_log_t:s0
 /var/run/media/.*	<<none>>
+/dev/oracleasm/.*	<<none>>
 /sys/fs/cgroup/.*	<<none>>
 /sys/fs/pstore/.*	<<none>>
 /var/lib/udisks.*	system_u:object_r:devicekit_var_lib_t:s0
@@ -2453,6 +2454,7 @@
 /var/lib/NetworkManager(/.*)?	system_u:object_r:NetworkManager_var_lib_t:s0
 /var/run/NetworkManager(/.*)?	system_u:object_r:NetworkManager_var_run_t:s0
 /var/run/wpa_supplicant(/.*)?	system_u:object_r:NetworkManager_var_run_t:s0
+/etc/pki/pki-tomcat/ca/(/.*)?	system_u:object_r:pki_tomcat_cert_t:s0
 /var/lib/pki/pki-tomcat(/.*)?	system_u:object_r:pki_tomcat_var_lib_t:s0
 /var/log/pki/pki-tomcat(/.*)?	system_u:object_r:pki_tomcat_log_t:s0
 /var/lib/pki-ocsp/alias(/.*)?	system_u:object_r:pki_tomcat_cert_t:s0
@@ -3030,6 +3032,7 @@
 /opt/dirsrv/var/run/dirsrv/dsgw/cookies(/.*)?	system_u:object_r:httpd_var_run_t:s0
 /usr/share/w3c-markup-validator/cgi-bin(/.*)?	system_u:object_r:w3c_validator_script_exec_t:s0
 /usr/lib/xorg/modules/extensions/nvidia(-[^/]*)?/libglx\.so(\.[^/]*)*	--	system_u:object_r:textrel_shlib_t:s0
+/usr/lib/systemd/system/ipa-ods-exporter.*	--	system_u:object_r:ipa_ods_exporter_unit_file_t:s0
 /usr/lib/systemd/system/corosync-qdevice.*	--	system_u:object_r:cluster_unit_file_t:s0
 /usr/lib/systemd/system/hwloc-dump-hwdata.*	--	system_u:object_r:hwloc_dhwd_unit_t:s0
 /usr/lib/systemd/system/ovirt-guest-agent.*	--	system_u:object_r:rhev_agentd_unit_file_t:s0
@@ -3151,8 +3154,8 @@
 /dev/uhid	-c	system_u:object_r:uhid_device_t:s0
 /dev/jsfd	-b	system_u:object_r:fixed_disk_device_t:s0
 /dev/gscd	-b	system_u:object_r:removable_device_t:s0
-/dev/root	-b	system_u:object_r:fixed_disk_device_t:s0
 /dev/sjcd	-b	system_u:object_r:removable_device_t:s0
+/dev/root	-b	system_u:object_r:fixed_disk_device_t:s0
 /dev/bpcd	-b	system_u:object_r:removable_device_t:s0
 /var/lock	-l	system_u:object_r:var_lock_t:s0
 /tmp-inst	system_u:object_r:tmp_t:s0
@@ -3296,8 +3299,8 @@
 /dev/sndstat	-c	system_u:object_r:sound_device_t:s0
 /dev/urandom	-c	system_u:object_r:urandom_device_t:s0
 /dev/prandom	-c	system_u:object_r:random_device_t:s0
-/dev/jsflash	-c	system_u:object_r:fixed_disk_device_t:s0
 /dev/console	-c	system_u:object_r:console_device_t:s0
+/dev/jsflash	-c	system_u:object_r:fixed_disk_device_t:s0
 /dev/vttuner	-c	system_u:object_r:v4l_device_t:s0
 /dev/hwcdrom	-b	system_u:object_r:removable_device_t:s0
 /var/run/ndc	-s	system_u:object_r:named_var_run_t:s0
@@ -3572,9 +3575,10 @@
 /usr/bin/xauth	--	system_u:object_r:xauth_exec_t:s0
 /usr/sbin/bgpd	--	system_u:object_r:zebra_exec_t:s0
 /var/qmail/bin	-d	system_u:object_r:bin_t:s0
-/sys/fs/pstore	-d	system_u:object_r:pstore_t:s0
 /sys/fs/cgroup	-d	system_u:object_r:cgroup_t:s0
+/sys/fs/pstore	-d	system_u:object_r:pstore_t:s0
 /dev/hugepages	-d	system_u:object_r:hugetlbfs_t:s0
+/dev/oracleasm	-d	system_u:object_r:oracleasmfs_t:s0
 /dev/mmetfgrab	-c	system_u:object_r:scanner_device_t:s0
 /dev/microcode	-c	system_u:object_r:cpu_device_t:s0
 /dev/hw_random	-c	system_u:object_r:random_device_t:s0
@@ -5733,6 +5737,7 @@
 /usr/lib/dirsrv/cgi-bin/ds_remove	--	system_u:object_r:dirsrvadmin_unconfined_script_exec_t:s0
 /usr/libexec/dovecot/dovecot-auth	--	system_u:object_r:dovecot_auth_exec_t:s0
 /usr/share/firstboot/firstboot\.py	--	system_u:object_r:firstboot_exec_t:s0
+/usr/libexec/ipa/ipa-ods-exporter	--	system_u:object_r:ipa_ods_exporter_exec_t:s0
 /usr/libexec/nm-libreswan-service	--	system_u:object_r:ipsec_mgmt_exec_t:s0
 /usr/lib/mozilla/plugins/nppdf\.so	--	system_u:object_r:textrel_shlib_t:s0
 /usr/lib/ladspa/notch_iir_1894\.so	--	system_u:object_r:textrel_shlib_t:s0
@@ -5767,6 +5772,7 @@
 /usr/lib/systemd/systemd-tmpfiles	--	system_u:object_r:systemd_tmpfiles_exec_t:s0
 /usr/lib/systemd/systemd-coredump	--	system_u:object_r:systemd_coredump_exec_t:s0
 /usr/bin/vmware-user-suid-wrapper	--	system_u:object_r:vmtools_helper_exec_t:s0
+/usr/libexec/gsd-backlight-helper	--	system_u:object_r:xserver_exec_t:s0
 /var/lib/likewise-open/\.netlogond	-s	system_u:object_r:netlogond_var_socket_t:s0
 /var/lib/likewise-open/rpc/socket	-s	system_u:object_r:eventlogd_var_socket_t:s0
 /etc/Pegasus/pegasus_current\.conf	system_u:object_r:pegasus_data_t:s0
