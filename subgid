@@ -20,5 +20,6 @@ tcpdump:1279648:65536
 admin:1345184:65536
 vboxadd:1410720:65536
 gkrellmd:1476256:65536
-# empty default subuid/subgid file
 setroubleshoot:1541792:65536
+# empty default subuid/subgid file
+named:1607328:65536
