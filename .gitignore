@@ -7,11 +7,14 @@
 ld.so.cache
 named.conf.pre*
 pki
+**/*.bak
 **/*.old
 **/*.save
+cups/printers.conf*
 cups/subscriptions.conf*
 mail/sendmail.cf.bak
 mail/client-info*
+mail/authinfo*
 ntp.conf
-**/tmp
+tomcat/tomcat-users.xml
 
