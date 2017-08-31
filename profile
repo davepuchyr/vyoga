@@ -77,7 +77,7 @@ unset -f pathmunge
 
 # dmjp
 export EDITOR=vim
-export BROWSER=firefox
+export BROWSER=google-chrome
 # dmjp: appengine maxs out at jdk7 as of 2014.08.12 export JAVA_HOME=/usr/java/latest
 #export JAVA_HOME=/usr/java/jdk1.7.0_79
 

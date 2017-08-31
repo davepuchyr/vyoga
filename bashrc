@@ -110,4 +110,4 @@ alias mysqldump='mysqldump --skip-opt --add-drop-table --add-locks --create-opti
 alias vncviewer='vncviewer DotWhenNoCursor=1'
 alias mpg123='mpg123 --verbose --control --title --long-tag'
 alias dracut='dracut -v --add resume'
-
+alias google-chrome='google-chrome --remote-debugging-port=9222'
